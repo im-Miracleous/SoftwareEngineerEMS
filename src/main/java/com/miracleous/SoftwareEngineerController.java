@@ -19,6 +19,11 @@ public class SoftwareEngineerController {
         return softwareEngineerService.getAllSoftwareEngineers();
     }
 
+    @GetMapping("{id}")
+    public SoftwareEngineer getEngineerById(@PathVariable Integer id) {
+        return softwareEngineerService.getSoftwareEngineerById(id);
+    }
+
     @PostMapping
     // Usually, we don't want to use entity, but it's okay for this case
     public void addNewSoftwareEngineer(@RequestBody SoftwareEngineer softwareEngineer) {
