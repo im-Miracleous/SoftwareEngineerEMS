@@ -21,4 +21,8 @@ public class SoftwareEngineerService {
         // Best practices:
 //        return softwareEngineerRepository.findAll().stream().map([A class that you can return to the client]);
     }
+
+    public void insertSoftwareEngineer(SoftwareEngineer softwareEngineer) {
+        softwareEngineerRepository.save(softwareEngineer);
+    }
 }
